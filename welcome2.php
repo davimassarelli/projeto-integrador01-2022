@@ -35,7 +35,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <p>Aqui você pode praticar seus conhecimentos antes da prova da UNIVESP, boa sorte!</p>
 
     </div>
-    <div class="col justify-content-md-center w-25">
+    <div class="col justify-content-md-center">
         <div class="row row-cols-1 mx-auto">
             <div class="d-grid gap-2 col-12 mx-auto">
                 <a href="simulador2.php" class="btn btn-success">Testar conhecimento</a>
