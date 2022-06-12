@@ -37,7 +37,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
     <div class="col justify-content-md-center">
         <div class="row row-cols-1 mx-auto">
-            <div class="d-grid gap-2 mx-auto">
+            <div class="d-grid gap-2 col-12 mx-auto">
                 <a href="simulador2.php" class="btn btn-success">Testar conhecimento</a>
                 <a href="administracao.php" class="btn btn-outline-primary">Área de Administração</a>
                 <a href="perguntas_respostas.php" class="btn btn-outline-secondary">Visualizar Perguntas e Respostas</a>

@@ -9,7 +9,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 ?>
  
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -19,14 +19,31 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style>
         body{ font: 14px sans-serif; text-align: center; background-color: #f7f7f7;}
     </style>
-</head>
+</head> -->
+
+<?php include "header.php"; ?>
+
 <body>
-   <h1 class="my-5">Bem Vindo, <b><?php echo htmlspecialchars($_SESSION["username"]);?></b> ao Vestibular Descomplicado UNIVESP.</h1>
-    <p>
-        <a href="simulador.php" class="btn btn-success">Testar conhecimento</a>
-        <a href="reset-password.php" class="btn btn-warning">Redefina sua senha</a>
-        <a href="logout.php" class="btn btn-danger ml-3">Sair da conta</a>
-    </p> 
-   
+<div class="container">
+  <div class="row row-cols-auto justify-content-md-center mt-5">
+    <div class="col col-lg-8">
+        <p class="fs-2">Bem Vindo, <b><?php echo htmlspecialchars($_SESSION["username"]);?></b> ao Vestibular Descomplicado UNIVESP.</p>
+        <br/>
+        <p>Aqui você pode praticar seus conhecimentos antes da prova da UNIVESP, boa sorte!</p>
+
+    </div>
+    <div class="col justify-content-md-center">
+        <div class="row row-cols-1 mx-auto">
+            <div class="d-grid gap-2 mx-auto">
+                <a href="simulador.php" class="btn btn-success">Testar conhecimento</a>
+                <a href="reset-password.php" class="btn btn-outline-warning">Redefina sua senha</a>
+                <a href="logout.php" class="btn btn-outline-danger">Sair da conta</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
 </body>
-</html
+
+<?php include "footer.php"; ?>
