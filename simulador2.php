@@ -3,17 +3,21 @@ session_start();
 include_once 'conectar.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<?php include "header.php"; ?>
+
+
+
+
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="_css/estilo2.css" />
 	<title>Simulador Vestibular</title>
 </head>
 <body>
-	<div id="interface">
+<div class="container">
+  <div class="row mx-auto">
+    <div class="col vw-100">
+	</br>
+		<div class="mx-auto px-5">
 		<?php
 			$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 			
@@ -47,8 +51,14 @@ include_once 'conectar.php';
 			unset($_SESSION['msg']);
 			}
 		?>
-		<h1>Vestibular Descomplicado</h1>
-		<form action="" method="POST">
+		</div>
+
+	</div>
+  </div>
+  <div class="row">
+    <div class="col vw-100">
+
+	  <form action="" method="POST">
 			<div style="display: flex; justify-content: space-evenly">
 		<?php
 			if(($result_pergunta) AND $result_pergunta->rowCount() != 0){
@@ -83,19 +93,21 @@ include_once 'conectar.php';
 				echo "</div>";
 			?>
 			</div>
-			<input type="submit" name="valResposta" value="Enviar">			      
+			<input class="btn btn-primary" type="submit" name="valResposta" value="Enviar">	 <!-- Botão Pergunta -->		      
 		</form>
-		<hr>
-		<a href="simulador2.php"><button>Próxima</a>
-		<a href="welcome2.php"><button>Sair</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+		</br>
+		<a type="button" class="btn btn-outline-secondary" href="simulador2.php">Próxima Questão</a>
 	</div>
-	<figure class="foto-legenda">
-		<footer id="rodape">
-			<p>Copyright &copy; 2022 - by UNIVESP - Grupo 087 - Projeto Integrador 2 - Polo Avaré, Vila Curuçá e São Vicente</p>
-		</footer>
-	</figure>
-	</div>
+  </div>
+</div>
 
 	<script src="_javascript/funcoes.js"></script>
+
+
 </body>
-</html>
+
+<?php include "footer.php"; ?>
